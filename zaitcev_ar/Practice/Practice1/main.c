@@ -25,14 +25,14 @@ scanf("%f %f %f",&h, &w, &d);
 	{
 		printf("Error,nekorrektni vvod"); 
 		return;
-	}
+	} 
 	if((d<50)||(d>90))
 	{
 		printf("Error,nekorrektni vvod");
 		return;
 	} 
 
-p=(h/40); 
+    p=(h/40); 
 
 	m1 = (h * w * tdvp * dvp) / 1000000;        //Zadnia stenka
 	m2 = (2 * h * d * tdcp * dcp) / 1000000;    //Bokovini
