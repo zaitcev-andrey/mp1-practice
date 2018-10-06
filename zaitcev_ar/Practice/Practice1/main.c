@@ -6,7 +6,7 @@ void main()
 	float h, w, d, dcp, dvp, der, m1, m2, m3, m4, m5, m;
     float tdcp, tdvp, tder;   //Толщина дсп,двп,дерева соответсвенно
 	float p;                  //Количество полок в шкафу
-	setlocale(LC_ALL, "Rus");
+	setlocale(LC_CTYPE, "Rus");
 
 	dcp=750;
 	dvp=850;
