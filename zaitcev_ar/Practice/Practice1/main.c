@@ -14,7 +14,7 @@ void main()
 	tdvp=0,5;
 	tder=1;
 
-setlocale (LC_CTYPE,"russian");
+setlocale (LC_CTYPE,"rus");
 printf(" ¬ведите высоту(180см-220см), ширину(80см-120см) и глубину (50см-90см) шкафа");
 scanf("%f %f %f",&h, &w, &d);
 
