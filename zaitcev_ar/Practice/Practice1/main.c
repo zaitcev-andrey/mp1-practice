@@ -6,7 +6,7 @@ void main()
 	float h, w, d, dcp, dvp, der, m1, m2, m3, m4, m5, m;
     float tdcp, tdvp, tder;   //Толщина дсп,двп,дерева соответсвенно
 	float p;                  //Количество полок в шкафу
-	setlocale (LC_CTYPE,"rus");
+	setlocale(LC_ALL, "Rus");
 
 	dcp=750;
 	dvp=850;
@@ -23,7 +23,7 @@ scanf("%f %f %f",&h, &w, &d);
 		printf("Ошибка,некорректный ввод");
 		return;
 	}
-	if((w<80)||(w>120))
+	if((w<80)||(w>120)) 
 	{
 		printf("Ошибка,некорректный ввод"); 
 		return;
