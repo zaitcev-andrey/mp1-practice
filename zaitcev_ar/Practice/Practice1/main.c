@@ -1,12 +1,10 @@
 #include <stdio.h>
 #include <math.h>
-#include <locale.h>
 void main()
 {
 	float h, w, d, dcp, dvp, der, m1, m2, m3, m4, m5, m;
     float tdcp, tdvp, tder;   //Tolshina dcp,dvp,dereva
 	float p;                  //Polki
-	setlocale(LC_CTYPE, "Rus");
 
 	dcp=750;
 	dvp=850;
@@ -15,7 +13,7 @@ void main()
 	tdvp=0,5;
 	tder=1;
 
-printf(" Vvedite visotu(180см-220см), shirinu(80см-120см) i glubinu (50см-90см) shkafa");
+printf(" Vvedite visotu(180cm-220cm), shirinu(80cm-120cm) i glubinu (50cm-90cm) shkafa");
 scanf("%f %f %f",&h, &w, &d);
 
     if((h<180)||(h>220))
