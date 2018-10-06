@@ -32,7 +32,7 @@ scanf("%f %f %f",&h, &w, &d);
 		return;
 	} 
 
-    p=(h/40); 
+        p=(h/40); 
 
 	m1 = (h * w * tdvp * dvp) / 1000000;        //Zadnia stenka
 	m2 = (2 * h * d * tdcp * dcp) / 1000000;    //Bokovini
