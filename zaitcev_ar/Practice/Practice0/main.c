@@ -17,6 +17,5 @@ void main()
 	if(abs(r2-r1)<abs(o2-o1)<abs(r2+r1))
 	{
 		printf("intersect");
-	}
-	
+	}	
 }
