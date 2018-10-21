@@ -3,72 +3,76 @@
 #include <time.h>
 void main ()
 {
-	int a, b, c, d;
-	char f;
+	int regim, n, n1, n2, a, c, d;
+	char otnoshenie;
 	c = 0;
+	n1 = 1;
+	n2 = 1000;
 	srand ((unsigned int)time(0));
-	printf ("Vevedite 1 ili 2 dlya vibora rejima \n");
-	scanf("%d", &a);
 
-	if ((a != 1) && (a != 2))
+	do
 	{
-		printf ("Neverni vvod");
-	}
-	if (a == 1)
+		printf (" enter (1 or 2) for choice regima (enter 2 times) \n ");
+	scanf(" %d ", &regim);
+	} while ((regim != 1) && (regim != 2)); 
+
+	if (regim == 1)
 	{
-		b = rand() % 1001;
+		n = rand() % 1001;
 		while (1)
 		{
-			printf ("Vvedite chislo \n");
-			scanf ("%d", &d);
+			printf (" Vvedite luboe chislo (enter 2 times) \n ");
+			scanf (" %d ", &d);
 			c++;
-			if (d == b)
+			if (d == n)
 			{
 				break;
 			}
-			if (d > b)
+			if (d > n)
 			{
-				printf ("Zagadannoe chislo bolshe \n");
+				printf (" Vvodimoe chislo bolshe zagadannogo \n ");
 			}
-			if (d < b)
+			if (d < n)
 			{
-				printf ("Zagadannoe chislo menshe \n");
+				printf (" Vvodimoe chislo menshe zagadannogo \n ");
 			}
 		}
-		printf ("Vi ugadali chislo \n kolichestvo hodov = %d", c);
+		c = c / 2;
+		printf (" You ugadali chislo \n kolichestvo hodov = %d ", c);
 		return;
-
 	}
-	if (a == 2)
+
+	if (regim == 2)
 	{
-		printf ("Zagadai chislo.");
-		b = rand() % 1001;
-	    while (1)
+		do
 		{
-			int b2;
+			printf(" Vvedite chislo (1-1000) (enter 2 times) \n ");
+			scanf(" %d ", &n);
+		} while ((n < n1) || (n > n2));
+
+		do {
 			c++;
-			printf ("Kak programma reagiruet na chislo b(ot 0 do 1000) %d \n Vvedite znak otnosheniya( >, <, =) \n", b);
-			scanf ("%c", &f);
-			switch (f)
+			a = (n2 - n1) / RAND_MAX * rand() + n1;
+			printf(" Computer: This chislo %d ", a);
+
+			printf(" User: Your otnoshenie (>, <, =) - ");
+			scanf(" %c ", &otnoshenie);
+
+			switch (otnoshenie)
 			{
-			case '=':
-				break;
 			case '>':
-				while (b > b2)
-				{
-					b2 = rand() % 1001; 
-				}
-				b = b2;
+				n2 = a;
+				a = (n2 - 1) / RAND_MAX * rand() + n1;
+				break;
 			case '<':
-				while (b < b2)
-				{
-					b2 = rand() % 1001;
-				}
-				b = b2;
-			default: printf ("Neverni vvod.");
-			}			
-		}
-		printf ("Vashe chislo %d \n kolichestvo hodov = %d", b, c);  
-		return;
+				n1 = a;
+				a = (n2 - n1) / RAND_MAX * rand() + n1;
+				break;
+			case '=':
+				printf(" User: Ugadali. ");
+				printf(" Number of attempts = %d ", c);
+				return;
+			}
+			} while (a != 0);
 	}
 }
