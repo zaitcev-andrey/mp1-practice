@@ -13,16 +13,16 @@ void main ()
 	do
 	{
 		printf (" enter (1 or 2) for choice regima (enter 2 times) \n ");
-	scanf(" %d ", &regim);
-	} while ((regim != 1) && (regim != 2)); 
+	scanf("%d", &regim);
+	} while ((regim != 1) && (regim != 2));
 
 	if (regim == 1)
 	{
-		n = rand() % 1001;
+		n = (rand() % 1000) + 1;
 		while (1)
 		{
 			printf (" Vvedite luboe chislo (enter 2 times) \n ");
-			scanf (" %d ", &d);
+			scanf ("%d", &d);
 			c++;
 			if (d == n)
 			{
@@ -37,7 +37,6 @@ void main ()
 				printf (" Vvodimoe chislo menshe zagadannogo \n ");
 			}
 		}
-		c = c / 2;
 		printf (" You ugadali chislo \n kolichestvo hodov = %d ", c);
 		return;
 	}
@@ -47,7 +46,7 @@ void main ()
 		do
 		{
 			printf(" Vvedite chislo (1-1000) (enter 2 times) \n ");
-			scanf(" %d ", &n);
+			scanf("%d", &n);
 		} while ((n < n1) || (n > n2));
 
 		do {
@@ -55,8 +54,8 @@ void main ()
 			a = (n2 - n1) / RAND_MAX * rand() + n1;
 			printf(" Computer: This chislo %d ", a);
 
-			printf(" User: Your otnoshenie (>, <, =) - ");
-			scanf(" %c ", &otnoshenie);
+			printf(" User: Your otnoshenie (>, <, =) - "); 
+			scanf("%*c%c", &otnoshenie);
 
 			switch (otnoshenie)
 			{
