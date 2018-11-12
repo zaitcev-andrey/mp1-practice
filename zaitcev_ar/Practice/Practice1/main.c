@@ -16,17 +16,17 @@ void main()
     printf(" Vvedite visotu(180cm-220cm), shirinu(80cm-120cm) i glubinu (50cm-90cm) shkafa \n ");
     scanf("%f %f %f",&h, &w, &d);
 
-    if((h < 180) || (h > 220))
+    if ((h < 180) || (h > 220))
     {
         printf("Error,nekorrektni vvod");
         return;
     }
-    if((w < 80) || (w > 120)) 
+    if ((w < 80) || (w > 120)) 
     {
         printf("Error,nekorrektni vvod"); 
         return;
     } 
-    if((d < 50) || (d > 90))
+    if ((d < 50) || (d > 90))
     {
         printf("Error,nekorrektni vvod");
         return;
