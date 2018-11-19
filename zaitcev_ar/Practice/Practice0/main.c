@@ -47,7 +47,7 @@ void main()
 
     else
     {
-        printf("Peresecautcya v 2-uh obshih tochkah");
+        printf("Peresecautcya v 2-uh obshih tochkah\n");
         return;
     }
 }
