@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+
 void main ()
 {
 	int regim, n, n1, n2, a, c, d;
