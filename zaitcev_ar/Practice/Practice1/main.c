@@ -40,7 +40,7 @@ void main()
     m2 = (2 * h * d * tdcp * dcp);                                                   //Bokovini
     m3 = (2 * w * d * tdcp * dcp);                                                   //Verh i niz
     m4 = (h * w * tder * der);                                                       //2 dveri
-    m5 = ((h - 2 * 0.015) / (0.4 + 0.015) * (w - 2 * 0.015) * (d - 0.005) * dcp);    //Polki
+    m5 = (int)((h - 2 * 0.015) / (0.4 + 0.015) * (w - 2 * 0.015) * (d - 0.005) * dcp);    //Polki
 
     m = m1 + m2 + m3 + m4 + m5;
 
